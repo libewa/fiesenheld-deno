@@ -1,20 +1,20 @@
-const token = process.env['token']
+import { require } from "https://deno.land/x/require/mod.ts"
+
+const token = Deno.env.get('token')
 
 // register command
 
-import { REST, Routes, Collection, ActivityType } from 'npm:discord.js'
+import { REST, Routes, Collection, ActivityType, Client, GatewayIntentBits } from 'npm:discord.js'
 const { nowPlaying, status, activity, afk } = require('./config.json')
-const keep_alive = require('./keep_alive.js');
+import _keep_alive from './keep_alive.js'
 
 console.log(token)
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs'
+import path from 'node:path'
 const rest = new REST({ version: '10' }).setToken(token);
 
 // wait for interaction
-
-const { Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 // Import commands from ./commands/
 client.commands = new Collection();

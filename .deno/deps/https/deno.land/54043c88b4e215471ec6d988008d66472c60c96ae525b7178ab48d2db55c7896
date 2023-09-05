@@ -1,0 +1,5 @@
+export function require (path: string) {
+	return Deno.readTextFile(path).then((res: string) => {
+		return JSON.parse(res)
+	});
+}
