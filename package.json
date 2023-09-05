@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@discordjs/builders": "^1.6.1",
+    "@replit/database": "^2.0.2",
+    "cheerio": "^1.0.0-rc.12",
+    "discord.js": "^14.11.0",
+    "events": "^3.3.0",
+    "pkg": "^5.8.0",
+    "rss-parser": "^3.12.0"
+  }
+}
