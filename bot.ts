@@ -11,7 +11,6 @@ Deno.serve(
 
 import { REST, Routes, Collection, ActivityType, Client, GatewayIntentBits } from 'npm:discord.js'
 const { nowPlaying, status, activity, afk } = require('./config.json')
-import _keep_alive from './keep_alive.js'
 
 console.log(token)
 
