@@ -2,6 +2,11 @@ import { require } from "https://deno.land/x/require/mod.ts"
 
 const token = Deno.env.get('token')
 
+Deno.serve(
+  { port: 3000, hostname: "0.0.0.0" },
+  (_req) => new Response("Trust me, I'm still alive. Now visit https://discord.com/api/oauth2/authorize?client_id=1049397374952419368&permissions=380171769856&scope=bot%20applications.commands to try me out!")
+);
+
 // register command
 
 import { REST, Routes, Collection, ActivityType, Client, GatewayIntentBits } from 'npm:discord.js'
